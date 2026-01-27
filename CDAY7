@@ -1,0 +1,264 @@
+#include <stdio.h>
+#include<string.h>
+struct structure{
+    int roll;
+    char name[10];
+    float marks;
+};
+int main() {
+     struct structure stru1,stru2;
+     stru1.roll=42;
+     strcpy(stru1.name,"pooja");
+     stru1.marks=95;
+     stru2.roll=12;
+     strcpy(stru2.name,"Ela");
+     stru2.marks=95;
+     
+     printf("The Roll number is : %d\n",stru1.roll);
+     printf("The Name is : %s\n",stru1.name);
+     printf("The marks is : %.2f\n",stru1.marks);
+     printf("The Roll number is : %d\n",stru2.roll);
+     printf("The Name is : %s\n",stru2.name);
+     printf("The marks is : %.2f\n",stru2.marks);
+     return 0;
+}
+
+
+
+
+
+#include <stdio.h>
+struct structure{
+    int id[5];
+    float salary[5];
+};
+int main() {
+     struct structure stru1,stru2;
+     printf("Enter the Employee ID :\n");
+     for(int i=0;i<3;i++)
+     {
+         scanf("%d",&stru1.id[i]);
+     }
+    printf("Enter the Salary of the Employee : \n");
+    for(int i=0;i<3;i++)
+    {
+         scanf("%f",&stru1.salary[i]);
+     }
+     printf("Enter the Employee ID & salary : \n");
+     for(int i=0;i<3;i++)
+     {
+         printf(" ID : %d ,Salary :%.2f\n",stru1.id[i],stru1.salary[i]);
+     }
+     
+     
+     
+    
+}
+
+
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+struct student
+{
+    char firstname[20];
+    char lastname[20];
+};
+struct details
+{
+    char dept[20];
+    int year;
+    struct student people;
+};
+int main() {
+    struct student names = {"pooja","sri C"};
+    struct details about = {"ECE",2028,names};
+    printf("My name is %s %s . I am from the department of %s ,going to be graduate in the year of %d",about.people.firstname,about.people.lastname,about.dept,about.year);
+
+
+    return 0;
+}
+
+
+
+
+
+
+#include<stdio.h>
+struct student{
+    char name[20];
+    int regno;
+};
+int main(){
+    struct student std1={"pooja sri C",1403};
+    struct student *point=&std1;
+    printf("my name is %s \n",point->name);
+        printf("my name is memory address %p \n",point->name);
+        printf("my name is%d \n",point->regno);
+        printf("my name is memory address %p \n",point->regno);
+        
+return 0;
+}
+
+
+
+
+ #include <stdio.h>
+
+struct Address {
+    char city[20];
+    int pincode;
+};
+
+struct Student {
+    int id;
+    char name[30];
+    struct Address addr;
+};
+
+int main() {
+    struct Student s;
+    struct Student *ptr;   
+
+    ptr = &s;             
+    printf("Enter Student ID: ");
+    scanf("%d", &ptr->id);
+
+    printf("Enter Student Name: ");
+    scanf("%s", ptr->name);
+
+    printf("Enter City: ");
+    scanf("%s", ptr->addr.city);
+
+    printf("Enter Pincode: ");
+    scanf("%d", &ptr->addr.pincode);
+    printf("\n--- Student Details ---\n");
+    printf("ID      : %d\n", ptr->id);
+    printf("Name    : %s\n", ptr->name);
+    printf("City    : %s\n", ptr->addr.city);
+    printf("Pincode : %d\n", ptr->addr.pincode);
+
+    return 0;
+}
+    
+
+
+
+#include <stdio.h>
+
+struct Department {
+    char deptName[30];
+    int deptID;
+};
+
+struct Employee {
+    int empID;
+    char empName[30];
+    struct Department dept;
+};
+
+int main() {
+    struct Employee e;
+    struct Employee *ptr;
+
+    ptr = &e;
+    printf("Enter Employee ID: ");
+    scanf("%d", &ptr->empID);
+
+    printf("Enter Employee Name: ");
+    scanf("%s", ptr->empName);
+
+    printf("Enter Department Name: ");
+    scanf("%s", ptr->dept.deptName);
+
+    printf("Enter Department ID: ");
+    scanf("%d", &ptr->dept.deptID);
+    printf("\n--- Employee Details ---\n");
+    printf("Employee ID   : %d\n", ptr->empID);
+    printf("Employee Name : %s\n", ptr->empName);
+    printf("Department    : %s\n", ptr->dept.deptName);
+    printf("Department ID : %d\n", ptr->dept.deptID);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
