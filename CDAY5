@@ -1,0 +1,330 @@
+#include <stdio.h>
+#include<stdlib.h>
+int main() {
+    int n,i;
+    int *array;
+    int sum =0;
+    printf("Enter the number of element: ");
+    scanf("%d",&n);
+    array=(int*)malloc(n *sizeof(int));
+    if(array == NULL)
+    {
+        printf("Memory not allocated\n");
+        return 0;
+    }
+    else
+    {
+        printf("Memory allocated and the allocated memory is %d\n",n);
+    }
+    printf("Enter %d Numbers by adding a gap for each numbers\n",n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&array[i]);
+        sum +=array[i];
+        
+    }
+    printf("The sum of all elements is : %d\n",sum);
+    //destroy the memory
+    free(array);
+    printf("Memory deleted sucessfully");
+    return 0;
+}
+
+
+
+
+
+
+#include <stdio.h>
+#include<stdlib.h>
+int main() {
+    int n,i;
+    int *array;
+    int sum =0;
+    printf("Enter the number of element: ");
+    scanf("%d",&n);
+    array=(int*)calloc(n ,sizeof(int));
+    if(array == NULL)
+    {
+        printf("Memory not allocated\n");
+        return 0;
+    }
+    else
+    {
+        printf("Memory allocated and the allocated memory is %d\n",n);
+    }
+    printf("Enter %d Numbers by adding a gap for each numbers\n",n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&array[i]);
+        sum +=array[i];
+        
+    }
+    printf("The sum of all elements is : %d\n",sum);
+    //destroy the memory
+    free(array);
+    printf("Memory deleted sucessfully");
+    return 0;
+}
+
+
+
+
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+int main() {
+    int n,i;
+    int *array;
+    int sum=0;
+    printf("Enter the number of element:");
+    scanf("%d",&n);
+    array=(int*)calloc(n ,sizeof(int));
+    if(array==NULL){
+        printf("memory not allocated \n");
+        return 0;
+    }else{
+        printf("memory allocated and the allocated memory is %d \n",n);
+    }
+    printf("enter %d numbers by adding a gap for each number \n",n);
+    for(i=0;i<n;i++){
+        scanf("%d",&array[i]);
+        sum+=array[i];
+    }
+    int newvalue;
+    printf("Enter the new value:\n");
+    scanf("%d",&newvalue);
+    array=(int*)realloc(array,newvalue*sizeof(int));
+    if(array==NULL){
+                printf("memory not allocated \n");
+ }else{
+             printf("memory allocated and the allocated memory is %d \n",newvalue);
+
+ }
+   printf("Enter %d numbers by adding a gap for each number \n",newvalue);
+   for(i=n;i<newvalue;i++){
+       scanf("%d",&array[i]);
+       sum+=array[i];
+   }
+    printf("The sum of all elements is :%d \n",sum);
+    free(array);
+    printf("memory deleted successfully");
+    
+
+    return 0;
+}
+
+
+
+
+#include <stdio.h>
+#include<stdlib.h>
+int main()
+{
+  int n;
+  int *p;
+  printf("Enter the number of subjects :\n");
+  scanf("%d",&n);
+  p=(int*)malloc(n * sizeof(int));
+  printf("the marks of the subject is :\n");
+  for(int i=0;i<n;i++)
+  {
+    scanf("%d",&p[i]);
+  }
+   for(int i=0;i<n;i++)
+  {  printf("the marks of the subject  %d is:  \n",i+1);
+
+    printf("%d\n",p[i]);
+  }
+  free(p);
+  printf("memory deleted");
+  
+  
+}
+
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<stdlib.h>
+int main()
+{
+  int n,id;
+  int *p;
+  printf("Enter the employee ID :\n");
+  scanf("%d",&n);
+  p=(int*)calloc(n ,sizeof(int));
+  printf("the employee ID is:\n");
+  if(p==NULL)
+  {
+     printf("invalid memory");
+  }
+  for(int i=0;i<n;i++)
+  {
+    scanf("%d",&p[i]);
+  }
+   for(int i=0;i<n;i++)
+  {  printf("the employee ID  %d is:  \n",i+1);
+
+    printf("%d\n",p[i]);
+  }
+  
+  
+  
+  free(p);
+  printf("memory deleted");
+  
+  
+}
+
+/*#include<stdio.h>
+int main()
+{
+    int numbers[5]={0,1,2,3,4};
+    int *point = numbers;
+    printf("%d\n",*point);
+    printf("%d\n",*(point+1));
+    printf("%d\n",*(point+3));
+    printf("%d\n",*(point+5));
+    
+    
+}
+
+
+#include<stdio.h>
+int main()
+{
+    int numbers[5]={0,1,2,3,4};
+    int *point = numbers;
+    printf("%d\n",*point);
+    printf("%d\n",*(point+1));
+    point++;
+    printf("%d\n",*point);
+    point--;
+    printf("%d\n",*point);
+    point+=2;
+    printf("%d\n",*point);
+}
+
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<stdlib.h>
+int main()
+{
+  int n,id;
+  int *p;
+  printf("Enter the employee ID :\n");
+  scanf("%d",&n);
+  p=(int*)calloc(n ,sizeof(int));
+  printf("the employee ID is:\n");
+  if(p==NULL)
+  {
+     printf("invalid memory");
+  }
+  for(int i=0;i<n;i++)
+  {
+    scanf("%d",&p[i]);
+  }
+   for(int i=0;i<n;i++)
+  {  printf("the employee ID  %d is:  \n",i+1);
+
+    printf("%d\n",p[i]);
+  }
+  
+  
+  
+  free(p);
+  printf("memory deleted");
+  
+  
+}
+
+/*#include<stdio.h>
+int main()
+{
+    int numbers[5]={0,1,2,3,4};
+    int *point = numbers;
+    printf("%d\n",*point);
+    printf("%d\n",*(point+1));
+    printf("%d\n",*(point+3));
+    printf("%d\n",*(point+5));
+    
+    
+}
+
+
+#include<stdio.h>
+int main()
+{
+    int numbers[5]={0,1,2,3,4};
+    int *point = numbers;
+    printf("%d\n",*point);
+    printf("%d\n",*(point+1));
+    point++;
+    printf("%d\n",*point);
+    point--;
+    printf("%d\n",*point);
+    point+=2;
+    printf("%d\n",*point);
+}
+
+    
+
+
+
+#include<stdio.h>
+int main()
+{
+  int number = 10;
+  int *point = &number;
+  int **secondpoint = &point;
+  printf("%d\n",number);
+  printf("%p\n",point);
+  printf("%d\n",*point);
+  printf("%p\n",secondpoint);
+  printf("%d\n",**secondpoint);
+  return 0;
+}
+
+
+
+
+#include<stdio.h>
+int main()
+{
+  int number = 10;
+  int *point = &number;
+  int **secondpoint = &point;
+  printf("%d\n",number);
+  printf("%p\n",point);
+  printf("%d\n",*point);
+  printf("%p\n",secondpoint);
+  printf("%d\n",**secondpoint);
+  **secondpoint = 20;
+  printf("%p\n",secondpoint);
+  printf("%d\n",**secondpoint);
+  return 0;
+}
+
+
+
+
+*/
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int a[5]={0,1,2,3,4};
+    int *point =a;
+    for(int i=0;i<5;i++){
+        printf("%d\n",*point);
+        point++;
+    }
+    
+
+    return 0;
+} 
