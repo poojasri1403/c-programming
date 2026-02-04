@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct train
+{
+  int stcode;
+  struct train *prev;
+  struct train *next;
+};
+
+int main() 
+{
+    struct train *head=NULL,*temp;
+    char A1[10],B2[10],c3[10];
+    char m[3]={A1,B2,C3};
+    for(int i=0;i<3;i++)
+    {
+        struct train *newn=(struct train*)malloc(sizeof(struct train));
+        newn->stcode=m[i];
+        newn->next=head;
+        newn->prev=NULL;
+        if(head!=NULL)
+        {
+            head->prev=newn;
+        }
+        head=newn;
+    }
+    temp=head;
+    while(temp!=NULL)
+    {
+        printf("%d",temp->stcode);
+        temp=temp->next;
+        if(temp!=NULL)
+        {
+            printf("<>");
+        }
+    }
+    printf("NULL");
+    return 0;
+}
+
+
+
+
+
+#include <stdio.h>
+#include<stdlib.h>
+struct contact{
+    long int number;
+    struct contact*next;
+};
+
+int main() {
+    struct contact*st1=(struct contact*)malloc(sizeof(struct contact));
+    struct contact*st2=(struct contact*)malloc(sizeof(struct contact));
+    struct contact*st3=(struct contact*)malloc(sizeof(struct contact));
+     st1->number=1234567894;
+     st2->number=1254789630;
+     st3->number=7894561230;
+     st1->next=st2;
+     st2->next=st3;
+     st3->next=st1;
+     struct contact*head=st1;
+     struct contact *temp= head;
+     printf("contact\n");
+    do{
+       printf("%ld--->",temp->number);
+         temp=temp->next;
+     } while(temp!=head){
+     printf("finish\n");
+    return 0;
+}
